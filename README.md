@@ -1,67 +1,86 @@
 🚀 By-LeyzS Arch + Hyprland Dotfiles (V1.0) 🏁
 🚨 IMPORTANT: MUST INSTALL FIRST
 
-Before copying the files, install these packages from your terminal so the system works with all its features:
+👉 Before copying the files, install these packages so the system works with ALL features (colors, notifications, wallpapers, etc.)
 
-Core Components & Visuals:
+⚙️ Core Components & Visuals
+
 sudo pacman -S hyprland waybar wofi wlogout kitty fastfetch swww swaync hyprlock pywal16 mpvpaper grim slurp wl-clipboard
 
-Fonts & Tools:
+🔤 Fonts & Tools
+
 yay -S matugen-bin ttf-jetbrains-mono-nerd
 
 🖼️ WALLPAPER MANAGEMENT
 
-Static Picker (WIN + W):
-Open the menu to pick an image. Place your wallpapers in ~/.config/wallpapers.
+✨ Static Picker (WIN + W)
+→ Pick an image from menu
+→ Put wallpapers in: ~/.config/wallpapers
 
-Randomizer (WIN + R):
-Automatically picks a random image from your folder.
+🎲 Randomizer (WIN + R)
+→ Picks a random wallpaper automatically
 
-Start Live Wallpaper (WIN + ALT + K):
-Starts .mp4 video wallpapers. Place your videos in ~/.config/Live Wallpapers.
+🎥 Start Live Wallpaper (WIN + ALT + K)
+→ Starts .mp4 wallpapers
+→ Folder: ~/.config/Live Wallpapers
 
-Switch Live Wallpaper (WIN + K):
-Smoothly cycles through your animated wallpapers.
+🔁 Switch Live Wallpaper (WIN + K)
+→ Smoothly switches between videos
 
-Mode Switching:
-Selecting a static image via WIN + W will automatically stop the video player.
+⚡ Mode Switching
+→ Using WIN + W automatically stops video wallpaper
 
-🖥️ MONITOR SETTINGS (IMPORTANT)
+🖥️ MONITOR SETTINGS (VERY IMPORTANT)
 
-This config is set for DP-1 by default. If your screen is black or Waybar overlaps:
+⚠️ Default monitor = DP-1
 
-Type hyprctl monitors in your terminal to find your monitor name (e.g., HDMI-A-1)
-Open ~/.config/hypr/configs/monitors.conf and replace DP-1 with your actual monitor name
+If something looks broken:
+
+👉 Screen black OR Waybar bug
+
+✔️ Fix:
+Run: hyprctl monitors
+Find your monitor name (example: HDMI-A-1)
+Open:
+~/.config/hypr/configs/monitors.conf
+Replace:
+DP-1 → YOUR MONITOR NAME
 ⌨️ KEYBINDINGS
 
-🔒 Lock Screen: WIN + L
-🔍 App Launcher: WIN + A
-❌ Close Window: WIN + Q
-🛸 Floating Mode: WIN + F
-🔢 Workspaces: WIN + 1 / 2 / 3 / 4
-🚚 Move Window: WIN + SHIFT + (Number)
+🔒 WIN + L → Lock Screen
+🔍 WIN + A → App Launcher
+❌ WIN + Q → Close Window
+🛸 WIN + F → Floating Mode
+
+🔢 WIN + 1 / 2 / 3 / 4 → Workspaces
+🚚 WIN + SHIFT + Number → Move Window
 
 🚀 INSTALLATION
 
-Follow these steps in order:
+👉 Follow these steps IN ORDER
 
-1. Clone the Repository
+📥 1. Clone the Repository
 
 git clone https://github.com/L3yzs/By-LeyzS-Arch-Hyprland-Dotfiles.git
 
 cd By-LeyzS-Arch-Hyprland-Dotfiles
 
-2. Copy Config Files
+📂 2. Copy Config Files
 
-This command moves everything into your .config folder:
+👉 Moves everything into your .config folder
 
-cp -r .config/* ~/.config/
+cp -r .config/ ~/.config/*
 
-3. Fix User Paths (Magic Command) 🪄
+🪄 3. Fix User Paths (IMPORTANT)
 
-Run this to automatically replace leyzs with your own username:
+👉 This replaces leyzs → your username automatically
 
 find ~/.config/ -type f -exec sed -i "s/leyzs/$(whoami)/g" {} +
 
-Note:
-This command scans all files inside .config and fixes paths so wallpapers and themes load correctly. ✨
+⚠️ NOTE (READ THIS)
+
+✨ This command will:
+
+Scan all .config files
+Fix paths automatically
+Ensure wallpapers & themes work correctly
