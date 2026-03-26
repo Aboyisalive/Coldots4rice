@@ -18,8 +18,7 @@ sudo pacman -S swaync hyprlock
 sudo pacman -S grim slurp wl-clipboard
 
 
-![Screenshot](ss.png)
-
+![By-LeyzS Hyprland Ricing](ss.png)
 
 
 # 🚀 L€yzS Arch + Hyprland Dotfiles (V1.0) 🏁
