@@ -4,11 +4,11 @@
   "hide-on-action": true,
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
-  "positionY": "top",
-  "control-center-margin-top": 15,
-  "control-center-margin-bottom": 0,
+  "positionY": "bottom",
+  "control-center-margin-top": 100,
+  "control-center-margin-bottom": 5,
   "control-center-margin-right": 15,
-  "control-center-width": 380,
+  "control-center-width": 360,
   "control-center-height": 0,
   "layer": "overlay",
   "cssPriority": "user",
@@ -21,12 +21,12 @@
   ],
   "widget-config": {
       "title": {
-          "text": "Notifications",
+          "text": "󰆴 Notifications",
           "clear-all-button": true,
-          "button-text": "󰎟"
+          "button-text": "󰆴"
       },
       "dnd": {
-          "text": "Do Not Disturb"
+          "text": "Do Not Disturb ✖"
       },
       "mpris": {
           "image-size": 40,
