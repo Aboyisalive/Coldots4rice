@@ -1,10 +1,6 @@
 {
-    /* * 🌌 L€yzS Ricing - Waybar Configuration 🌌
-     * 🛠️  Architected by L€yzS
-     * 🖥️  Output: DP-1 | Setup: Floating Top Bar
-     */
 
-    "reload_config_on_change": false,
+    "reload_config_on_change": true,
     "reload_style_on_change": true,
     "layer": "top",
     "output": "DP-1",
@@ -26,7 +22,7 @@
         "tray", 
         "cpu", 
         "memory", 
-        "custom/separator", 
+        "custom/separator",
         "custom/headset", 
         "custom/notification", 
         "custom/power"
@@ -90,7 +86,7 @@
         "on-click": "headsetcontrol -b"
     },
 
-    /* [TR] Bildirim Merkezi (SwayNC) / [EN] Notification Center (SwayNC) */
+    /* [TR] Bildirim Merkezi (SwayNC) / [EN] Notification Center (dunst) */
     "custom/notification": {
         "tooltip": false,
         "format": "{icon}",
@@ -105,10 +101,10 @@
             "dnd-inhibited-none": ""
         }, 
         "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
+        "exec-if": "which dunstctl",
+        "exec": "dunstctl is-paused && echo '{\"text\":\"\",\"class\":\"paused\"}' || echo '{\"text\":\"\",\"class\":\"active\"}'",
+        "on-click": "dunstctl set-paused toggle",
+        "on-click-right": "dunstctl close-all",
         "escape": true
     }, 
 
